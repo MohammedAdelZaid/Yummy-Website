@@ -1,0 +1,117 @@
+body {
+    background-color: #0d0d0d;
+}
+
+/* ------------------------side-Bar--------------------- */
+.second-section img {
+    width: 50px;
+}
+
+.sideBarLinks ul li {
+    position: relative;
+    cursor: pointer;
+}
+
+.footerOfFirstSection i {
+    cursor: pointer;
+}
+
+
+/* -------------------main-section------------------ */
+.second-section i {
+    cursor: pointer;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.custom {
+    overflow: hidden;
+    border-radius: 20px;
+    border-width: 0;
+}
+
+.card figcaption {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(100%);
+    transition: all .5s;
+}
+
+.card:hover figcaption {
+    transform: translateY(0%);
+}
+
+.background {
+    background-color: #0d0d0d;
+}
+
+
+/* --------------------search---------------------- */
+
+.search-content .form-control {
+    background-color: transparent;
+    color: aliceblue;
+}
+
+
+.search-content .form-control::placeholder {
+    color: aliceblue;
+}
+
+
+/* -------------------loading---------------------- */
+.loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0d0d;
+    z-index: 9999;
+}
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    -webkit-mask: conic-gradient(from 15deg, #0000, #000);
+    mask: conic-gradient(from 15deg, #0000, #000); 
+    animation: l26 1s infinite steps(12);
+}
+
+@keyframes l26 {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    background:
+        radial-gradient(closest-side at 50% 12.5%,
+            #f03355 96%, #0000) 50% 0/20% 80% repeat-y,
+        radial-gradient(closest-side at 12.5% 50%,
+            #f03355 96%, #0000) 0 50%/80% 20% repeat-x;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    grid-area: 1/1;
+    transform: rotate(30deg);
+}
+
+.loader:after {
+    transform: rotate(60deg);
+}
+
+@keyframes l26 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
